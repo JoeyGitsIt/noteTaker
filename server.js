@@ -92,7 +92,7 @@ app.delete("/api/notes/:id", (req, res) => {
         console.error(err);
       } else {
         // Convert the string into a json object
-        const noteParse = JSON.parse(data);
+        let noteParse = JSON.parse(data);
         console.log(noteParse);
         // checks through all objects and deletes if id matches
         for (let i = 0; i < noteParse.length; i++) {
